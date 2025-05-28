@@ -27,12 +27,12 @@ stdenv.mkDerivation {
   dontFixup = true;
 
   installPhase = ''
-    runHook preInstall
+    # runHook preInstall
 
     mkdir $out
     cp -r -a files/* $out/
 
-    runHook postInstall
+    # runHook postInstall
   '';
 
   meta = {
