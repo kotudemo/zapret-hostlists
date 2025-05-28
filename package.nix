@@ -5,8 +5,7 @@
   stdenv,
   fetchFromGitHub,
   ...
-}:
-stdenv.mkDerivation {
+}: stdenv.mkDerivation {
   name = "zapret-hostlists";
 
   src = fetchFromGitHub {
@@ -27,16 +26,11 @@ stdenv.mkDerivation {
   dontFixup = true;
 
   installPhase = ''
-    # runHook preInstall
-
-    mkdir $out
-    cp -r -a files/* $out/
-
-    # runHook postInstall
+    cp -r . $out/
   '';
 
   meta = {
-    description = "hostlists from Snowy-Fluffy/zapret.cfgs repository";
+    description = "hostlists from Snowy-Fluffy/zapret.cfgs";
     homepage = "https://github.com/Snowy-Fluffy/zapret.cfgs";
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [kotudemo];
