@@ -9,11 +9,11 @@
   name = "zapret-hostlists";
 
   src = fetchFromGitHub {
-    owner = "Snowy-Fluffy";
-    repo = "zapret.cfgs";
-    rev = "86071cbd4eeaf6e4d598ce88777c454d8dcee64c";
-    hash = "sha256-KgDncfTICcsywX7immNfhQQmIfENHWlTO5ssv8SzcvQ=";
-  };
+  owner = "Snowy-Fluffy";
+  repo = "zapret.cfgs";
+  rev = "2f4cc343fd02999dcdf3bdff89039754585e02fd";
+  hash = "sha256-pPOPtJedOnYEKndrgh426SlInNTRqJpSgySyw5mzArY=";
+}
 
   nativeBuildInputs = [
     makeWrapper
