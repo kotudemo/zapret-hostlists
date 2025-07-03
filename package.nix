@@ -5,15 +5,16 @@
   stdenv,
   fetchFromGitHub,
   ...
-}: stdenv.mkDerivation {
+}:
+stdenv.mkDerivation {
   name = "zapret-hostlists";
 
   src = fetchFromGitHub {
-  owner = "Snowy-Fluffy";
-  repo = "zapret.cfgs";
-  rev = "2f4cc343fd02999dcdf3bdff89039754585e02fd";
-  hash = "sha256-pPOPtJedOnYEKndrgh426SlInNTRqJpSgySyw5mzArY=";
-}
+    owner = "Snowy-Fluffy";
+    repo = "zapret.cfgs";
+    rev = "2f4cc343fd02999dcdf3bdff89039754585e02fd";
+    hash = "sha256-pPOPtJedOnYEKndrgh426SlInNTRqJpSgySyw5mzArY=";
+  };
 
   nativeBuildInputs = [
     makeWrapper
